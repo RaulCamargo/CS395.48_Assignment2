@@ -1,19 +1,13 @@
-import React from "react";
-
-class Card extends React.Component
+const Card = ({image}) =>
 {
-    constructor(props)
-    {
-        super(props);
-        this.state = {isFlipped: false}
-    }
+    this.setState = {isFlipped: false}
 
-    handleClick = () => {
+    handleClick = () => 
+    {
         this.setState(state => ({isFlipped: !state.isFlipped}));
     }
 
-    render()
-    {
+  
         if(this.state.isFlipped === false)
         {
             return (
@@ -23,9 +17,13 @@ class Card extends React.Component
         }
         return (
             <div style={{height: '100px', width: '75px', backgroundColor: 'lightblue', borderStyle: 'solid', borderColor: 'black'}}
-            onClick={this.handleClick}>{this.props.cardText}</div>
+            onClick={this.handleClick}>{image}</div>
         );
-    }
+    
 }
 
 export default Card;
+
+{cardValues.map((item, idx) => (<Card key={idx} cardText={item} />))}
+
+const cardValues = ["Card1", "Card2", "Card3", "Card4"];
