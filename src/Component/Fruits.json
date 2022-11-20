@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "text": "Apple",
+            "src": "./assets/Apple.png"
+        },
+        { 
+            "text": "Grapes",
+            "src": "./assets/Grapes.png"
+        },
+        {
+            "text": "Plum",      
+            "src": "./assets/Plum.png"
+        },
+        {
+            "text": "Strawberry",    
+            "src": "./assets/Strawberry.png"
+        }
+      ]
+}

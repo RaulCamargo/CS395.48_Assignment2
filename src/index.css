@@ -5,10 +5,8 @@ body
 
 .header
 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+  text-align-last: center;
+  color: orangered;
 }
 
 .btn
@@ -23,4 +21,22 @@ body
   font-size: 15px;
   font-family: inherit;
   border-radius: 5px;
+}
+
+.cardNotFlipped
+{
+  height: '100px';
+  width: '75px'; 
+  background-color: 'black'; 
+  border-style: 'solid'; 
+  border-color: 'red';
+}
+
+.cardFlipped
+{
+  height: '100px'; 
+  width: '75px'; 
+  background-color: 'lightblue'; 
+  border-style: 'solid'; 
+  border-color: 'black';
 }
