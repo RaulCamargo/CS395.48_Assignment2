@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const Card = ({image}) =>
+const Card = ({verso, }) =>
 {
     const [isFlipped, setIsFlipped] = useState(false);
     const [matched, setMatched] = useState(false);
 
     var handleClick = () => 
     {
-        this.setState(state => ({isFlipped: !state.isFlipped}));
+        setIsFlipped(!isFlipped);
     };
 
   
@@ -18,7 +18,7 @@ const Card = ({image}) =>
             );
         }
         return (
-            <div className="cardFlipped" onClick={handleClick}>{image}</div>
+            <div className="cardFlipped" onClick={handleClick}>{verso}</div>
         );
     
 }

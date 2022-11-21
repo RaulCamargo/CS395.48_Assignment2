@@ -5,14 +5,14 @@ body
 
 .header
 {
-  text-align-last: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: orangered;
 }
 
 .btn
 {
-  display: inline-block;
-  background: blue;
   color: white;
   border: none;
   padding: 10px 20px;

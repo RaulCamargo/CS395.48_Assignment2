@@ -1,20 +1,23 @@
-{
-    "data": [
-        {
-            "text": "Apple",
-            "src": "./assets/Apple.png"
-        },
-        { 
-            "text": "Grapes",
-            "src": "./assets/Grapes.png"
-        },
-        {
-            "text": "Plum",      
-            "src": "./assets/Plum.png"
-        },
-        {
-            "text": "Strawberry",    
-            "src": "./assets/Strawberry.png"
-        }
-      ]
-}
+
+[
+    {
+        "id": 1,
+        "text": "Apple",
+        "image": "src/assets/Apple.svg"
+    },
+    { 
+        "id": 2,
+        "text": "Grapes",
+        "image": "src/assets/Grapes.svg"
+    },
+    {
+        "id": 3,
+        "text": "Pear",      
+        "image": "src/assets/Pear.svg"
+    },
+    {
+        "id": 4,
+        "text": "Strawberry",    
+        "image": "src/assets/Strawberry.svg"
+    }
+]
