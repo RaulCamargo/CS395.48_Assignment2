@@ -1,24 +1,28 @@
 import { useState } from "react";
 
-const Card = ({verso, }) =>
+
+
+const Card = ({flippedYN}) =>
 {
     const [isFlipped, setIsFlipped] = useState(false);
-    const [matched, setMatched] = useState(false);
+    //const [matched, setMatched] = useState(false);
 
-    var handleClick = () => 
-    {
-        setIsFlipped(!isFlipped);
-    };
-
+    // var handleClick = () => 
+    // {
+    //     setIsFlipped(!isFlipped);
+    // };
+    setIsFlipped(flippedYN);
   
         if(isFlipped === false)
         {
             return (
-                <div className="cardNotFlipped" onClick={handleClick}></div>
+                <div className="cardBack">
+                    <img className="back" src={brain} alt="brain" />
+                </div>
             );
         }
         return (
-            <div className="cardFlipped" onClick={handleClick}>{verso}</div>
+            <div className="cardFace"></div>
         );
     
 }
