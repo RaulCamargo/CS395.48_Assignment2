@@ -1,32 +1,22 @@
-import { useState } from "react";
+import brain from '../assets/Brain.svg';
 
-
-
-const Card = ({flippedYN}) =>
+const Card = ({card, handleChoice}) =>
 {
-    const [isFlipped, setIsFlipped] = useState(false);
-    //const [matched, setMatched] = useState(false);
+    const handleClick = () =>
+    {
+        handleChoice(card)
+    }
 
-    // var handleClick = () => 
-    // {
-    //     setIsFlipped(!isFlipped);
-    // };
-    setIsFlipped(flippedYN);
-  
-        if(isFlipped === false)
-        {
-            return (
-                <div className="cardBack">
-                    <img className="back" src={brain} alt="brain" />
-                </div>
-            );
-        }
-        return (
-            <div className="cardFace"></div>
-        );
+    return (
+        <div className='card'>
+            <div>
+                <img className='face' src={card.src} alt={card.text} />
+                <img className='reverse' src={brain} alt='back' onClick={handleClick} />
+            </div>
+        </div>
+    )
+
     
 }
 
 export default Card;
-
-
