@@ -27,7 +27,7 @@ function App() {
   
   const handleChoice = (card) =>
   {
-    choiceOne ? setChoiceTwo(card.id) : setChoiceOne(card.id)
+    choiceOne ? setChoiceTwo(card.text) : setChoiceOne(card.text)
   }
 
   return (
@@ -39,7 +39,7 @@ function App() {
         {
           cardGrid.map(card => 
           (
-            <Card key={card.id} card={card} handleChoice={handleChoice}/>
+            <Card key={card.id} card={card} handleChoice={handleChoice} />
           ))
         }
       </div>
