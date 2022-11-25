@@ -31,28 +31,41 @@ function App() {
 
   useEffect(() =>
   {
-    if(choiceTwo && choiceOne)
+    if(choiceTwo)
     {
       if(choiceOne === choiceTwo)
       {
-        //setMatch(true)
-        console.log('match')
+        setCardGrid(prevCard => 
+          {
+            return prevCard.map(card => 
+              {
+                if(card.text === choiceOne)
+                {
+                  return {...card, matched: true}
+                }
+                else
+                {
+                  return card
+                }
+              })
+          })
         reset()
       }
       else
       {
         reset()
-        console.log('no match')
       }
     }
-  })
+  },
+  [choiceOne, choiceTwo])
+
+  console.log(cardGrid)
 
   const reset = () =>
   {
     setChoiceOne(null)
     setChoiceTwo(null)
     setFlips(prevCount => prevCount + 1)
-    //setMatch(false)
   }
 
   return (

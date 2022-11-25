@@ -12,6 +12,8 @@ const Card = ({card, handleChoice}) =>
         setSelected(true)
     }
 
+    
+
     if(selected === false)
     {
         return (
