@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Button from './Component/Button';
 import {fruits} from './Component/Fruits';
@@ -12,7 +12,6 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [flips, setFlips] = useState(0);
-  
   
   // Durstenfeld Shuffle
   function shuffle() {
@@ -30,6 +29,32 @@ function App() {
     choiceOne ? setChoiceTwo(card.text) : setChoiceOne(card.text)
   }
 
+  useEffect(() =>
+  {
+    if(choiceTwo && choiceOne)
+    {
+      if(choiceOne === choiceTwo)
+      {
+        //setMatch(true)
+        console.log('match')
+        reset()
+      }
+      else
+      {
+        reset()
+        console.log('no match')
+      }
+    }
+  })
+
+  const reset = () =>
+  {
+    setChoiceOne(null)
+    setChoiceTwo(null)
+    setFlips(prevCount => prevCount + 1)
+    //setMatch(false)
+  }
+
   return (
     <div className="App">
       <h1 className='header'>Fruit for Brains</h1>
@@ -42,6 +67,9 @@ function App() {
             <Card key={card.id} card={card} handleChoice={handleChoice} />
           ))
         }
+      </div>
+      <div>
+        <p>Rounds: {flips}</p>
       </div>
     </div>
       

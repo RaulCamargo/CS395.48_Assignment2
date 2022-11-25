@@ -4,6 +4,7 @@ import { useState } from 'react';
 const Card = ({card, handleChoice}) =>
 {
     const [selected, setSelected] = useState(false);
+    const [matched, setMatched] = useState(false);
 
     const handleClick = () =>
     {
