@@ -10,6 +10,7 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [flips, setFlips] = useState(0);
+  const [disableClick, setDisableClick] = useState(false)
   
   // Durstenfeld Shuffle
   function shuffle() {
@@ -32,6 +33,8 @@ function App() {
   {
     if(choiceOne && choiceTwo)
     {
+      setDisableClick(true)
+
       if(choiceOne.src === choiceTwo.src)
       {
         setCardGrid(prevCardGrid => 
@@ -65,6 +68,7 @@ function App() {
     setChoiceOne(null)
     setChoiceTwo(null)
     setFlips(prevFlips => prevFlips + 1)
+    setDisableClick(false)
   }
 
   return (
@@ -76,7 +80,11 @@ function App() {
         {
           cardGrid.map(card => 
           (
-            <Card key={card.id} card={card} handleChoice={handleChoice} selected={card === choiceOne || card === choiceTwo || card.matched} />
+            <Card key={card.id} 
+              card={card} 
+              handleChoice={handleChoice} 
+              selected={card === choiceOne || card === choiceTwo || card.matched}
+              disableClick={disableClick} />
           ))
         }
       </div>

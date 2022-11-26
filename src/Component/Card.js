@@ -1,10 +1,13 @@
 import brain from '../assets/Brain.svg';
 
-const Card = ({card, handleChoice, selected}) =>
+const Card = ({card, handleChoice, selected, disableClick}) =>
 {
     const handleClick = () =>
     {
-        handleChoice(card)
+        if(!disableClick)
+        {
+            handleChoice(card)
+        }
     }
 
     return (

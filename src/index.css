@@ -49,14 +49,27 @@ body
 .card .face
 {
   transform: rotateY(90deg);
-  position: absolute
+  position: absolute;
+  transition: all ease-in 0.2s;
 }
 .card .chosen .face
 {
   transform: rotateX(0);
+  transition-delay: 0.2s;
+}
+.card .reverse
+{
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+.card .chosen .reverse
+{
+  transform: rotateY(90deg);
+  transition-delay: 0s;
 }
 
 .reverse:hover
 {
   cursor: pointer;
+  transform: scale(1.05);
 }
