@@ -8,18 +8,22 @@ export const fruits =
 [
     {
         "text": "Apple",
-        "src": apple
+        "src": apple,
+        "matched": false
     },
     { 
         "text": "Grapes",
-        "src": grapes
+        "src": grapes,
+        "matched": false
     },
     {
         "text": "Pear",      
-        "src": pear
+        "src": pear,
+        "matched": false
     },
     {
         "text": "Strawberry",    
-        "src": strawberry
+        "src": strawberry,
+        "matched": false
     }
 ];
